@@ -1,6 +1,8 @@
 package chess;
 
 import jogo_tabuleiro.Board;
+import jogo_tabuleiro.Positions;
+import chess.pecas.*;
 
 public class PartidaXadrez {
 
@@ -8,7 +10,7 @@ public class PartidaXadrez {
 
     public PartidaXadrez() {
         board = new Board(8,8);
-
+        iniciaPartida();
     }
 
     public PecaXadrez [][] getPecas() {
@@ -19,5 +21,12 @@ public class PartidaXadrez {
             }
         }
 return mat;
+    }
+
+
+    private void iniciaPartida() {
+        board.lugarPeca(new Torre(board, Cor.BRANCO), new Positions(2,1));
+        board.lugarPeca(new Rei(board, Cor.PRETO), new Positions(0,4));
+        board.lugarPeca(new Rei(board, Cor.BRANCO), new Positions(7,4));
     }
 }

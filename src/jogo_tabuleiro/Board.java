@@ -34,4 +34,10 @@ public class Board {
     public Peca peca(Positions positions) {
         return pecas[positions.getLinha()][positions.getColuna()];
     }
+
+    public void lugarPeca(Peca peca, Positions positions){
+        pecas[positions.getLinha()][positions.getColuna()] = peca;
+        peca.position = positions;
+    }
+
 }
