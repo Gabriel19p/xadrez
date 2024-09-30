@@ -1,12 +1,14 @@
 package app;
 
-import tabuleiro.positions;
+import chess.PartidaXadrez;
+import chess.PecaXadrez;
+import jogo_tabuleiro.Board;
+import jogo_tabuleiro.Positions;
 
-public class program {
-    public static void main(String[] args)
+public class Program {
+    public static void main(String[] args) {
 
-    {
-        positions pos = new positions (3, 5);
-        System.out.println(pos);
+        PartidaXadrez partidaXadrez = new PartidaXadrez();
+        UI.printBoard(partidaXadrez.getPecas());
     }
 }

@@ -27,4 +27,11 @@ public class Board {
     public void setColunas(int colunas) {
         this.colunas = colunas;
     }
+
+    public Peca peca(int linhas, int colunas){
+        return pecas [linhas][colunas];
+    }
+    public Peca peca(Positions positions) {
+        return pecas[positions.getLinha()][positions.getColuna()];
+    }
 }
