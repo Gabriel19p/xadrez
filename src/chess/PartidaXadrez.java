@@ -27,8 +27,18 @@ return mat;
     }
 
     private void iniciaPartida() {
-       lugarNovoPeca('b', 6, new Torre(board, Cor.BRANCO));
-       lugarNovoPeca('e', 8, new Rei(board, Cor.BRANCO));
-       lugarNovoPeca('e', 1, new Rei(board, Cor.BRANCO));
+        lugarNovoPeca('c', 1, new Torre(board, Cor.BRANCO));
+        lugarNovoPeca('c', 2, new Torre(board, Cor.BRANCO));
+        lugarNovoPeca('d', 2, new Torre(board, Cor.BRANCO));
+        lugarNovoPeca('e', 2, new Torre(board, Cor.BRANCO));
+        lugarNovoPeca('e', 1, new Torre(board, Cor.BRANCO));
+        lugarNovoPeca('d', 1, new Rei(board, Cor.BRANCO));
+
+        lugarNovoPeca('c', 7, new Torre(board, Cor.PRETO));
+        lugarNovoPeca('c', 8, new Torre(board, Cor.PRETO));
+        lugarNovoPeca('d', 7, new Torre(board, Cor.PRETO));
+        lugarNovoPeca('e', 7, new Torre(board, Cor.PRETO));
+        lugarNovoPeca('e', 8, new Torre(board, Cor.PRETO));
+        lugarNovoPeca('d', 8, new Rei(board, Cor.PRETO));
     }
 }
