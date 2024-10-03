@@ -1,7 +1,6 @@
 package chess;
 
 import jogo_tabuleiro.Board;
-import jogo_tabuleiro.Positions;
 import chess.pecas.*;
 
 public class PartidaXadrez {
@@ -23,10 +22,13 @@ public class PartidaXadrez {
 return mat;
     }
 
+    private void lugarNovoPeca(char coluna, int linha, PecaXadrez peca){
+        board.lugarPeca(peca, new ChessPosition(coluna, linha).toPositions());
+    }
 
     private void iniciaPartida() {
-        board.lugarPeca(new Torre(board, Cor.BRANCO), new Positions(2,1));
-        board.lugarPeca(new Rei(board, Cor.PRETO), new Positions(0,4));
-        board.lugarPeca(new Rei(board, Cor.BRANCO), new Positions(7,4));
+       lugarNovoPeca('b', 6, new Torre(board, Cor.BRANCO));
+       lugarNovoPeca('e', 8, new Rei(board, Cor.BRANCO));
+       lugarNovoPeca('e', 1, new Rei(board, Cor.BRANCO));
     }
 }
