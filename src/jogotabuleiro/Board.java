@@ -1,4 +1,4 @@
-package jogo_tabuleiro;
+package jogotabuleiro;
 
 public class Board {
 
@@ -42,6 +42,19 @@ public class Board {
         }
         pecas[positions.getLinha()][positions.getColuna()] = peca;
         peca.position = positions;
+    }
+
+    public Peca removerPeca(Positions positions) {
+        if (!positionExists(positions)) {
+            throw new TabuleiroException("Essa posição não existe");
+        }
+        if (peca(positions) == null) {
+            return null;
+        }
+        Peca aux = peca(positions);
+        aux.position = null;
+        pecas[positions.getLinha()][positions.getColuna()] = null;
+        return aux;
     }
 
     private boolean positionExists(int linha, int coluna){

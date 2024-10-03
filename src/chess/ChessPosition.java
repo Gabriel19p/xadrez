@@ -1,6 +1,6 @@
 package chess;
 
-import jogo_tabuleiro.Positions;
+import jogotabuleiro.Positions;
 
 public class ChessPosition {
 

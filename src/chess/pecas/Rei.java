@@ -2,7 +2,7 @@ package chess.pecas;
 
 import chess.Cor;
 import chess.PecaXadrez;
-import jogo_tabuleiro.Board;
+import jogotabuleiro.Board;
 
 public class Rei extends PecaXadrez {
 

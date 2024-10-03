@@ -1,7 +1,7 @@
 package chess.pecas;
 
 import chess.PecaXadrez;
-import jogo_tabuleiro.Board;
+import jogotabuleiro.Board;
 import chess.Cor;
 
 public class Torre extends PecaXadrez {
